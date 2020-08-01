@@ -11,7 +11,7 @@ app = dash.Dash(
     server=server
 )
 
-app.title = "ADNAN"
+app.title = "ADNAN HOQ"
 application = app.server
 app.config.suppress_callback_exceptions = True
 

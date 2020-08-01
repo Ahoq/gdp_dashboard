@@ -21,7 +21,7 @@ layout = html.Div([
                 #     src=("/assets/orig.jpg"),
                 #     className="logo",
                 # ),
-                html.H5("DASH by Adnan")
+                html.H5("DASH by Adnan Hoq")
                 
             ],
             className="three columns main-title",
@@ -32,7 +32,7 @@ layout = html.Div([
     html.Div([
             html.Div([
                 html.Div([
-                    html.H6("Country:", style = {'fontSize':16, 'color':themes['theme2']['header']}),
+                    html.H5("Country:", style = {'color':themes['theme1']['header']}),
                     dcc.Dropdown(
                         id='key-picker',
                         options = [{'label': x, 'value': x} for x in dd['Country Name'].unique()],
@@ -46,8 +46,7 @@ layout = html.Div([
     ]),
     html.Div([
                 html.Div([
-                    html.H6("GDP Over Time", style = {'text-align' : 'center',
-                    'margin-top': "0px", 'color':themes['theme2']['header'], 'font-family': 'Telefonica'}),
+                    html.H4("GDP Over Time", style = {'text-align' : 'center', 'color':themes['theme1']['header']}),
                     dcc.Graph(
                             id='graph_dd',
                             config = {
@@ -90,23 +89,25 @@ def update_dd(selected_key):
                 text=dd_by_key['Country Name'],
                 hovertemplate= "Country: %{text}<br>Year: %{x}<br>GDP: %{y}",
                 name="%s's GDP"%i,
-                opacity=0.8))
+                opacity=0.8,
+                mode='lines+markers'
+                )
+            )
         
 
     return {
         'data': traces,
         'layout': go.Layout(
-            template = 'plotly_dark',
-            xaxis={'title': None, 'titlefont':{'color':themes['theme2']['plot_ticks']},
-             'tickfont':{'color':themes['theme2']['plot_ticks']},'gridcolor':themes['theme2']['grid_color']
+            xaxis={'title': None,
+             'tickfont':{'color':themes['theme1']['plot_ticks']},'gridcolor':themes['theme1']['grid_color']
               },
-            yaxis={'title': 'GDP', 'titlefont':{'color':themes['theme2']['plot_ticks']},
-             'tickfont':{'color':themes['theme2']['plot_ticks']},'gridcolor':themes['theme2']['grid_color']},
+            yaxis={'title': 'GDP', 'titlefont':{'color':themes['theme1']['axis_title']},
+             'tickfont':{'color':themes['theme1']['plot_ticks']},'gridcolor':themes['theme1']['grid_color']},
             margin={'l': 40, 'b': 40, 't': 30, 'r': 10},
             hovermode='closest',
-            plot_bgcolor = themes['theme2']['background'],
-            paper_bgcolor= themes['theme2']['background'],
-            legend = {'font':{'color':themes['theme2']['plot_ticks']}}
+            plot_bgcolor = themes['theme1']['background'],
+            paper_bgcolor= themes['theme1']['background'],
+            legend = {'font':{'color':themes['theme1']['legend']}}
 
         )
     }
