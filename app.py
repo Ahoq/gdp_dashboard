@@ -8,11 +8,10 @@ server = Flask(__name__)
 
 
 app = dash.Dash(
-    server=server,
-
+    server=server
 )
 
-app.title = "PRISCILLA"
+app.title = "ADNAN"
 application = app.server
 app.config.suppress_callback_exceptions = True
 

@@ -32,16 +32,15 @@ layout = html.Div([
     html.Div([
             html.Div([
                 html.Div([
-                html.H6("Country:", style = {'fontSize':16, 'color':themes['theme2']['header']}),
-                dcc.Dropdown(
-                id='key-picker',
-                options = [{'label': x, 'value': x} for x in dd['Country Name'].unique()],
-                value=['United States','China', 'Germany', 'Japan'],
-                multi = True
-                )
-            ],className = 'multi',
-        style = {'font-family':'Telefonica'})
-        ], className = 'mini_container')
+                    html.H6("Country:", style = {'fontSize':16, 'color':themes['theme2']['header']}),
+                    dcc.Dropdown(
+                        id='key-picker',
+                        options = [{'label': x, 'value': x} for x in dd['Country Name'].unique()],
+                        value=['United States','China', 'Germany', 'Japan'],
+                        multi = True
+                    )
+                ],className = 'multi')
+            ], className = 'mini_container')
     
 
     ]),
