@@ -103,9 +103,6 @@ def update_dd(selected_key):
             yaxis={'title': 'GDP', 'titlefont':{'color':themes['theme2']['plot_ticks']},
              'tickfont':{'color':themes['theme2']['plot_ticks']},'gridcolor':themes['theme2']['grid_color']},
             margin={'l': 40, 'b': 40, 't': 30, 'r': 10},
-            font=dict(
-                family = 'Telefonica'
-            ),
             hovermode='closest',
             plot_bgcolor = themes['theme2']['background'],
             paper_bgcolor= themes['theme2']['background'],
