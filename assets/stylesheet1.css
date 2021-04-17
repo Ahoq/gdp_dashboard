@@ -10,14 +10,25 @@
 
 }
 
+html, body{
+  width:100%;
+  height:100%;
+  background:
+    linear-gradient(
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url("double-bubble.png");
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+}
 
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: var(--general_background);
-
+*
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Avenir';
 }
 
 
@@ -44,10 +55,10 @@ body {
 }
 
 .main-title {
+  margin-top: 1em;
   position: relative;
   color: var(--main_title_text);
   font-size: 40px !important;
-  width: 80%;
   border-left: 20px solid var(--main_title_border);
   background: var(--main_title_background);
   padding-left: 10px;

@@ -3,7 +3,7 @@ dash-core-components==1.4.0
 dash-html-components==1.0.1
 dash-renderer==1.2.0
 Flask==1.1.1
-pandas==0.25.3
+pandas==1.2.4
 plotly==4.2.1
 ipykernel==5.3.4
 ipython==7.16.1

@@ -2,3 +2,9 @@
 
 __pycache__
 .DS_Store
+.vscode
+bin
+lib
+share
+etc
+pyvenv.cfg

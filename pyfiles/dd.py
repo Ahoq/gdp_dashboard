@@ -21,10 +21,10 @@ layout = html.Div([
                 #     src=("/assets/orig.jpg"),
                 #     className="logo",
                 # ),
-                html.H5("DASH by Adnan Hoq")
+                html.H5("GDP Dashboard")
                 
             ],
-            className="three columns main-title",
+            className="two columns main-title",
             ),
     ], className='row'),
     
@@ -60,7 +60,7 @@ layout = html.Div([
                     )
                 ], className = 'pretty_container'),
 
-    ], style = {'margin-bottom': '20px'}),
+    ], style = {'margin-bottom': '0px'}),
     
     get_footer()
   
@@ -98,17 +98,15 @@ def update_dd(selected_key):
     return {
         'data': traces,
         'layout': go.Layout(
-            xaxis={'title': None,
-             'tickfont':{'color':themes['theme1']['plot_ticks']},'gridcolor':themes['theme1']['grid_color']
-              },
-            yaxis={'title': 'GDP', 'titlefont':{'color':themes['theme1']['axis_title']},
-             'tickfont':{'color':themes['theme1']['plot_ticks']},'gridcolor':themes['theme1']['grid_color']},
-            margin={'l': 40, 'b': 40, 't': 30, 'r': 10},
-            hovermode='closest',
-            plot_bgcolor = themes['theme1']['background'],
-            paper_bgcolor= themes['theme1']['background'],
-            legend = {'font':{'color':themes['theme1']['legend']}}
+            xaxis={'title': None,'titlefont':{'color':'#858585'},'linecolor':'#000000',
+                   'tickfont':{'color':'#858585','size':18},'showgrid':False,'showline':False},
 
+            yaxis={'title': 'GDP','titlefont':{'color':'#858585','size':20}, 'tickfont':{'color':'#858585','size':18},
+                   'showgrid':False},
+            margin={'l': 80, 'b': 40, 't': 30, 'r': 40},
+            template = 'none',
+            hovermode='closest',
+            showlegend =  True
         )
     }
 

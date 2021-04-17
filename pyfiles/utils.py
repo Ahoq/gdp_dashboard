@@ -14,7 +14,7 @@ themes={
 def get_footer():
     footer = html.Div([
             html.Div([
-                html.H5("© Adnan Hoq", style = {'position': 'relative', 'float': 'right', 'margin-top':'30px','margin-bottom':'30px'})
+                html.H5("© Adnan Hoq", style = {'position': 'relative', 'float': 'right', 'margin-top':'0px','margin-bottom':'0px'})
             ]),
 
         ], className = 'banner3')
